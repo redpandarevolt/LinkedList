@@ -20,7 +20,7 @@ int main() {
     cout << "Entire number list: " << endl;
     numbers.printList();
     cout << endl;
-    
+
     cout << "Remove first node and print: " << endl;
     numbers.deleteNode(3);
     numbers.printList();
@@ -35,5 +35,8 @@ int main() {
     numbers.deleteNode(12);
     numbers.printList();
     cout << endl;
+
+    numbers.reverse();
+    numbers.printList();
     return 0;
 }

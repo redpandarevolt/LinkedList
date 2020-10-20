@@ -24,6 +24,7 @@ public: //functions go here
     List();
     void addNode(int addData);
     void deleteNode(int deleteData);
+    void reverse();
     void printList();
 
 };
