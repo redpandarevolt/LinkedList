@@ -24,8 +24,11 @@ public: //functions go here
     List();
     void addNode(int addData);
     void deleteNode(int deleteData);
+    void removeDuplicatesSortedList();
+    void removeDupsUnsortedList();
     void reverse();
     void printList();
+
 
 };
 

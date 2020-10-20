@@ -5,6 +5,8 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <list>
+#include <set>
 
 #include "List.h"
 
@@ -94,4 +96,44 @@ void List::reverse(){
         curr = next;
     }
     head = prev;
+}
+
+//void List::removeDupsUnsortedList(){
+//    set<int> uniques;
+//    node *n = head;
+//    node *p = NULL;
+//    while(n != NULL){
+//        if(uniques.find(n->data)){
+//            p->next = n->next;
+//        } else {
+//            uniques.insert(n->data);
+//            cout << n->data << " ";
+//            p = n;
+//        }
+//        n = n->next;
+//    }
+//
+//}
+
+
+void List::removeDuplicatesSortedList(){
+
+    nodePtr curr = head;
+    nodePtr trav;
+
+    while(curr != NULL && curr->next !=NULL){
+        if(curr->data == curr->next->data){
+            trav = curr->next->next;
+            if(trav == NULL){
+                curr->next = NULL;
+                break;
+            }
+            curr->next = trav;
+        }
+        if(curr->data != curr->next->data){
+            curr = curr->next;
+        }
+    }
+    printList();
+
 }
